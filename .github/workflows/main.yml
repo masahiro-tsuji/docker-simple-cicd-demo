@@ -7,8 +7,8 @@ on:
 env:
   AWS_REGION: ap-northeast-1
   ECS_SERVICE: simple-cicd-service
-  ESC_CLUSTER: simple-cicd-cluster
-  ESC_TASK_DEFINITION: .aws/task-definition.json
+  ECS_CLUSTER: simple-cicd-cluster
+  ECS_TASK_DEFINITION: .aws/task-definition.json
 
 permissions:
   contents: read
@@ -129,15 +129,3 @@ jobs:
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
-
-# ECR に image を push
-
-# API Container Build/Test
-# ソースの取得
-# ビルド・テスト
-# Docker Image Build
-# AWS ログイン
-# ECR に image を push
-
-# Deploy
-# ソースの取得
