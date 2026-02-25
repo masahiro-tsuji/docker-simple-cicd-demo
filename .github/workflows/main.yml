@@ -30,7 +30,7 @@ jobs:
       # ビルド・テスト
       - name: Build an Image and Run Tests
         run: |
-          docker image build --target production -t temp_web_image_name:latest --build-arg REACT_APP_API_SERVER=/api .
+          docker image build --target prod -t temp_web_image_name:latest --build-arg REACT_APP_API_SERVER=/api .
 
       # AWS ログイン
       - name: Configure AWS credentials
