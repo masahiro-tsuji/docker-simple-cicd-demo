@@ -11,5 +11,5 @@ RUN npm run test && npm run build
 
 # prod
 FROM nginx:latest AS production
-COPY --from=build /workspace/build /var/ww
+COPY --from=build /workspace/build /var/www
 COPY nginx.conf /etc/nginx/conf.d/default.conf
